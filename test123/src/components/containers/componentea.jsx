@@ -5,28 +5,23 @@ import ComponenteB from './componenteb';
 import { Contacto } from '../models/contact.class';
 
 
-function ComponenteA({ contacto }) {
-    const contactoPrueba2 = {
-        nombre: 'Fulanito',
-        apellido: 'de OpenBootcamp',
-        email: 'fulanito@open-bootcamp.com',
-        conectado: false,
-      };
+function ComponenteA({ contacto: contac }) {
+
 
 
     return (
       <div>
         <h1>Contacto:</h1>
-        <h2>Nombre: {contacto.nombre}</h2>
-        <h3>Apellidos: {contacto.apellido}</h3>
-        <h3>Email: {contacto.email}</h3>
-         <ComponenteB estado={true} /> 
+        <h2>Nombre: {contac.nombre}</h2>
+        <h3>Apellidos: {contac.apellido}</h3>
+        <h3>Email: {contac.email}</h3>
+         <ComponenteB estado={false}></ComponenteB>
       </div>
     );
   }
   
   ComponenteA.propTypes = {
-    contacto: PropTypes.instanceOf(Contacto),
+    contac: PropTypes.instanceOf(Contacto),
   };
   
   export default ComponenteA;

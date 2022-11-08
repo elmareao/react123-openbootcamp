@@ -3,10 +3,11 @@ import PropTypes from 'prop-types';
 import { Contacto } from '../models/contact.class';
 
 
-function ComponenteB(estado) {
+
+function ComponenteB(props) {
     
     
-    const [conectado, setestado] = useState(estado);
+    const [conectado, setestado] = useState(props.estado);
 
     const cambiarEstado = () => {
         //actualizar estado
@@ -16,13 +17,15 @@ function ComponenteB(estado) {
 
     return (
         <div> 
-    
+            <h1>
+                Este se ve: {console.log(props.estado)}
+            </h1>
             <h3>
                 {conectado === true ? 'Contacto En linea' :  'Contacto no disponible' }
             </h3>
             
             <button onClick={cambiarEstado}>
-                Cambiar estado
+                {(conectado) ? "Desconectar" : "Conectar"}
             </button>
         </div>
     );

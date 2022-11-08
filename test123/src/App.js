@@ -7,7 +7,7 @@ function App() {
     nombre: 'Pepe',
     apellido: 'Argento',
     email: 'pepeargento@mailoculto.com',
-    conectado: false,
+    conectado: true,
   };
 
   
