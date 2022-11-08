@@ -17,9 +17,6 @@ function ComponenteB(props) {
 
     return (
         <div> 
-            <h1>
-                Este se ve: {console.log(props.estado)}
-            </h1>
             <h3>
                 {conectado === true ? 'Contacto En linea' :  'Contacto no disponible' }
             </h3>
